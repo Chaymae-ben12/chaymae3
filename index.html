@@ -4,6 +4,57 @@
    <meta charset = "utf-8">
    <link rel = "stylesheet " href = "CSS/estilos.css ">
    <title> Presentación </title>
+   <script>
+
+function checkMail(cadena) {
+
+let plant = /[^\w^@^\.^-]+/gi
+
+if (plant.test(cadena))
+
+     alert(cadena + " contiene caracteres extraños.")
+
+else{
+
+     plant =/(^\w+)(@{1})([\w\.-]+$)/i
+
+     if (plant.test(cadena))
+
+         alert(cadena + " es correcta.") 
+
+     else 
+
+         alert(cadena + " no es válida.") 
+
+    } 
+
+}
+
+</script>
+
+
+
+<script>
+
+function checkTelef(cadena){
+
+  let plant = /[0-9]{3}\s[0-9]{2}\s[0-9]{2}\s[0-9]{2}/g;
+
+  if (plant.test(cadena))
+
+     alert(cadena + "\n Responde a la plantilla.")
+
+  else
+
+     alert(cadena + "\nNo responde a la plantilla.") 
+
+}
+
+</script>
+
+
+
+
 </head>
 <body> 
 <h1> Mi presentación </h1>
@@ -13,20 +64,39 @@ Quiero estudiar una ingeniería, aunque aún no estoy segura de cuál, pero creo
 <a href= "https://chaymae-ben12.github.io/Chaymaee/">Link de una de mis páginas realizadas en github</a>
 
 <h2>Mis gustos</h2>  
-<table>
-<tr> 
-<th> <img src = "IMG/índice.jpeg">
-</th>
-<th> <img src = "IMG/r.jpeg">
-</th>
-</tr>
-<tr>
-<td> <img src = "IMG/e.jpeg">
-</td> 
-<td> <img src = "IMG/y.jpeg">
-</td> 
-</tr>
-</table> 
+ <table>
+  <tr>
+    <td> <img alt src="IMG/índice.jpeg" width="300" height="225"></td>
+    <td> <img alt src="IMG/r.jpeg" width="300" height="225"></td>
+   
+  </tr>
+  <tr>
+    <td> <img alt src="IMG/e.jpeg" width="300" height="225"></td>
+    <td><img alt src="IMG/y.jpeg" width="300" height="225"></td>
+ 
+  </tr>
+    </table>
+Si está interesado en encargar una página, introduce uno de los siguientes datos para poder contactarte : 
+   <form name="form1" method="post" action="">
 
+ Introduce tu e-mail 
+
+ <input type="text" name="email">
+
+ <input type="button" name="Button" value="Comprobar"       onclick="checkMail(this.form.email.value)">
+
+</form>
+<form name="form1" method="post" action="">
+
+ Introduzca su teléfono en el formato 999 99 99 99
+
+ <input type="text" name="email">
+
+ <input type="button" name="Button" value="Comprobar" 
+
+          onclick="checkTelef(this.form.email.value)">
+
+ </form>
+   
 </body>
 </html>
