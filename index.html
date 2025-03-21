@@ -92,7 +92,6 @@ if (ini){
 
 <script>
 
-//Definiciones iniciales
 
   !function init(){
 
@@ -104,54 +103,41 @@ if (ini){
 
   const anchoLetra = 65; 
 
-  //anchoLetra es el ancho que tienen los paneles de las letras  (CSS)
 
-  //Frases posibles para acertar, las vocales no llevan acentos
 
-  //No distingue entre mayúsuclas y minúsculas
+  frases[0] = "La campana no va a misa, pero avisa.";
 
-  frases[0] = "Cuando el viento sopla airado, no hay paz en ningun lado";
+  frases[1] = "Agua derramada no se puede recoger";
 
-  frases[1] = "En abril espigas mil, en mayo espigas y grano";
-
-  frases[2] = "Cuando llueve y hace sol, baila el perro y el pastor";
+  frases[2] = "Lo que el tiempo trae, el tiempo se lo lleva";
 
   elegida = Math.floor(Math.random()*(frases.length))
 
   fraseActual = frases[elegida];
 
-  //El contenedro del tablero de letras es un div con class panel 
-
-  //Guardo la frase en una propiedad añadida (frase) 
-
   panel = document.querySelector(".panel");
 
   panel.frase = fraseActual;
 
- //numero de columnas para evitar ruptura de palabras
+
 
   cols = Math.floor(panel.offsetWidth / anchoLetra);
 
   filas = wrap(fraseActual, cols); 
 
 
-//Añadir una fila por cada segmento de la frase formateada al panel
+
 
   filas.forEach(creaFila, panel) 
 
 
-//Asigna evento a los botones de las letras.
+
 
   let botonera = document.querySelector(".botonera");
 
   botonera.addEventListener('click', seleccionar)
 
 
-//FUNCIONES
-
-  //crea fila con bloques div para las letras
-
-  //usa this para el panel que contiene todas las filas
 
 function creaFila(cadena){
 
@@ -203,9 +189,6 @@ function creaFila(cadena){
 
   }
 
-//Parte la frase en secciones para no tener que romper palabras
-
-  //ancho es la anchura máxima del bloque que contendrá la frase
 
 function wrap(frase, ancho){ 
 
@@ -246,7 +229,7 @@ function wrap(frase, ancho){
           }
 
 
-//Lógica
+
 
 function seleccionar(e){
 
