@@ -4,8 +4,8 @@ body{ background-color:  #d1f2eb  ;
 h1 { color: white;
  background-color:  #d2b4de;
  }
-table {
- margin: 5px; 
+table, td{
+ border: 5 px; 
 }
 html{font-family:  "sans-serif";}
 body{ margin: 0}
