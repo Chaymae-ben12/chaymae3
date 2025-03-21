@@ -5,7 +5,7 @@ h1 { color: white;
  background-color:  #d2b4de;
  }
 table, td{
- border: 5 px; 
+ border: 1px solid black; 
 }
 html{font-family:  "sans-serif";}
 body{ margin: 0}
