@@ -51,12 +51,48 @@ function checkTelef(cadena){
 }
 
 </script>
+   
+<script>
+
+function animaTitulo(ini)
+
+{
+
+if (ini){
+
+    document.title = document.title.replaceAll(" ","\xA0")+"-";
+
+   ini = false;
+
+}
+
+ var actual = document.title;
+
+ var ind;
+
+ if(actual[0]=="\xA0")
+
+     ind=2;
+
+ else
+
+   ind=1;
+
+ sp = actual.substring(0, ind);
+
+ document.title = actual.substr(ind)+sp;
+
+ setTimeout(animaTitulo, 220,ini);
+
+ }
+
+</script>
 
 
 
 
 </head>
-<body> 
+<body onload="animaTitulo(true)"> 
 <h1> Mi presentación </h1>
 <p> Hola , me llamo Chaymae y soy una alumna del instituto <em>I.E.S Kursaal </em>. Actualmente tengo 17 años, casi 18, y estoy estudiando el bachillerato científico, específicamente, el tecnológico.
 Quiero estudiar una ingeniería, aunque aún no estoy segura de cuál, pero creo que va a ser ingeniería informática o ingeniería de software.</p>
